@@ -1,11 +1,16 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { HomePage, NotFoundPage } from './pages';
 
 function App() {
   return (
-    <div>
-      <h1>eCom Store</h1>
-      <p>Lets make this great!</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 
