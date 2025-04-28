@@ -7,6 +7,7 @@ module.exports = {
     'airbnb',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
+    'plugin:styled-components-a11y/recommended',
   ],
   overrides: [
     {

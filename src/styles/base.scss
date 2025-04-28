@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  margin-bottom: $spacing;
+}
+h2 {
+  font-size: $font-size-h2;
+  margin-bottom: $spacing;
+}
+h3 {
+  font-size: $font-size-h3;
+  margin-bottom: $spacing;
+}
+h4 {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+main {
+  min-height: calc(100vh - 120px);
+  padding: $spacing;
+}
