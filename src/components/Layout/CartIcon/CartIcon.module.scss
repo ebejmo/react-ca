@@ -1,28 +1,26 @@
-.wrapper {
+.cartButton {
+  background: none;
+  border: none;
+  color: var(--color-text);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  display: inline-block;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .icon {
   width: 28px;
   height: 28px;
-  color: rgb(0, 0, 0);
 }
 
 .badge {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  background-color: rgb(36, 36, 36);
-  color: white;
+  top: -5px;
+  right: -5px;
+  background-color: var(--color-primary);
+  color: var(--color-error);
   font-size: 0.7rem;
-  font-weight: bold;
-  border-radius: 9999px;
-  padding: 2px 6px;
-  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 50%;
 }

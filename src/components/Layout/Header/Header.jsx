@@ -1,10 +1,12 @@
-import CartIcon from '../CartIcon/CartIcon';
+import styles from './Header.module.scss';
+import TopBar from './TopBar';
 
 function Header() {
   return (
-    <div>
-      This is a Header <CartIcon cartCount={3} />
-    </div>
+    <header className={styles.header}>
+      <TopBar />
+      {/* <Navigation /> */}
+    </header>
   );
 }
 
