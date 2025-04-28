@@ -1,4 +1,4 @@
-import { CiShoppingCart } from 'react-icons/ci';
+import { LuShoppingCart } from 'react-icons/lu';
 import { useNavigate } from 'react-router-dom';
 import styles from './CartIcon.module.scss';
 
@@ -11,7 +11,7 @@ export default function CartIcon({ cartCount = 0 }) {
       onClick={() => navigate('/cart')}
       aria-label="View cart"
     >
-      <CiShoppingCart className={styles.icon} />
+      <LuShoppingCart className={styles.icon} />
       {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
     </button>
   );

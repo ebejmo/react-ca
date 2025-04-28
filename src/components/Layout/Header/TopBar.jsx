@@ -9,7 +9,7 @@ function TopBar() {
         SlapShop
       </Link>
       <div className={styles.actions}>
-        <CartIcon cartCount={3} />
+        <CartIcon cartCount={0} />
         {/* theme toggler */}
       </div>
     </div>
