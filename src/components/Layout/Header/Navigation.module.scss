@@ -29,6 +29,12 @@
   border-radius: var(--border-radius-small);
   background-color: var(--color-white);
   color: var(--color-black);
+  transition: var(--transition-default);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
 }
 
 .contactLink {
