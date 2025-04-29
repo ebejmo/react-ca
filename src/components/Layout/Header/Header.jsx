@@ -1,12 +1,12 @@
 import styles from './Header.module.scss';
-import TopBar from './TopBar';
-import Navigation from './Navigation';
+import HeaderActions from './HeaderActions/HeaderActions';
+// import HeaderMenu from './HeaderMenu/HeaderMenu';
 
 function Header() {
   return (
     <header className={styles.header}>
-      <TopBar />
-      <Navigation />
+      <HeaderActions />
+      {/* <HeaderMenu /> */}
     </header>
   );
 }

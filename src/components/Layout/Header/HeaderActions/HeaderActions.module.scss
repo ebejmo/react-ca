@@ -1,0 +1,24 @@
+@use './../../../../styles/variables.scss' as *;
+
+.actionsRow {
+  max-width: var(--max-width-content);
+  padding: 0 var(--padding-content);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.iconGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
