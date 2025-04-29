@@ -1,0 +1,22 @@
+@use './../../../styles/variables.scss' as *;
+
+.header {
+  background-color: var(--color-header);
+}
+
+.headerInner {
+  max-width: var(--max-width-content);
+  padding: 0 var(--padding-content);
+  border-bottom: 1px solid var(--color-border-light);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+}
+
+@media (max-width: $breakpoint-sm) {
+  .headerInner {
+    padding: 0 var(--padding-content);
+  }
+}

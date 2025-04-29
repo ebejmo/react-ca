@@ -29,6 +29,15 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'prettier/prettier': 'error',
+    'react/jsx-no-bind': [
+      'error',
+      {
+        ignoreRefs: true,
+        allowArrowFunctions: false,
+        allowFunctions: true,
+        allowBind: false,
+      },
+    ],
   },
   settings: {
     react: {

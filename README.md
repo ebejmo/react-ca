@@ -1,5 +1,7 @@
 # React + Vite
 
+SlapShop is a modern React-based eCommerce frontend built with Vite, SCSS, and Styled Components, featuring a dark theme, responsive design, and clean real-world project structure, powered by the Noroff Online Shop API.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
