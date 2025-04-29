@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchIcon from '../Icons/SearchIcon/SearchIcon';
+import MenuIcon from '../Icons/MenuIcon/MenuIcon';
 import headerStyles from './Header.module.scss';
 import styles from './Navigation.module.scss';
 
 function Navigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function handleToggleSearch() {
     setIsSearchOpen((prev) => !prev);
+  }
+
+  function handleToggleMobileMenu() {
+    setIsMobileMenuOpen((prev) => !prev);
   }
 
   function handleSearchSubmit(e) {
@@ -21,28 +27,45 @@ function Navigation() {
   }
 
   return (
-    <nav className={headerStyles.headerInner}>
-      <div className={styles.leftSection}>
-        <SearchIcon onClick={handleToggleSearch} />
+    <>
+      <nav className={headerStyles.headerInner}>
+        <div className={styles.leftSection}>
+          <SearchIcon onClick={handleToggleSearch} />
+          <form
+            onSubmit={handleSearchSubmit}
+            className={`${styles.searchForm} ${isSearchOpen ? styles.open : ''}`}
+          >
+            <input
+              type="text"
+              value={searchValue}
+              onChange={handleSearchChange}
+              placeholder="Search products"
+              className={styles.searchInput}
+            />
+          </form>
+        </div>
 
-        <form
-          onSubmit={handleSearchSubmit}
-          className={`${styles.searchForm} ${isSearchOpen ? styles.open : ''}`}
-        >
-          <input
-            type="text"
-            value={searchValue}
-            onChange={handleSearchChange}
-            placeholder="Search products"
-            className={styles.searchInput}
-          />
-        </form>
-      </div>
+        <div className={styles.rightSection}>
+          <Link to="/contact" className={styles.contactLink}>
+            Contact
+          </Link>
 
-      <Link to="/contact" className={styles.contactLink}>
-        Contact
-      </Link>
-    </nav>
+          <div className={styles.hamburgerButton}>
+            <MenuIcon
+              onClick={handleToggleMobileMenu}
+              isOpen={isMobileMenuOpen}
+            />
+          </div>
+        </div>
+      </nav>
+      {isMobileMenuOpen && (
+        <div className={styles.mobileMenu}>
+          <Link to="/contact" className={styles.mobileMenuLink}>
+            Contact
+          </Link>
+        </div>
+      )}
+    </>
   );
 }
 
