@@ -1,72 +1,29 @@
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import SearchIcon from '../../Icons/SearchIcon/SearchIcon';
-// import MenuIcon from '../../Icons/MenuIcon/MenuIcon';
-// import headerStyles from './Header.module.scss';
-// import styles from './Navigation.module.scss';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import SearchIcon from '../../Icons/SearchIcon/SearchIcon';
+import SearchBar from './SearchBar';
+import styles from './HeaderMenu.module.scss';
 
-// function HeaderMenu() {
-//   const [isSearchOpen, setIsSearchOpen] = useState(false);
-//   const [searchValue, setSearchValue] = useState('');
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+function HeaderMenu() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-//   function handleToggleSearch() {
-//     setIsSearchOpen((prev) => !prev);
-//   }
+  function handleToggleSearch() {
+    setIsSearchOpen((prev) => !prev);
+  }
 
-//   function handleToggleMobileMenu() {
-//     setIsMobileMenuOpen((prev) => !prev);
-//   }
+  return (
+    <div className={styles.menuRow}>
+      <div className={styles.left}>
+        <SearchIcon onClick={handleToggleSearch} />
+        <SearchBar isOpen={isSearchOpen} />
+      </div>
+      <nav className={styles.right}>
+        <Link to="/contact" className={styles.link}>
+          Contact
+        </Link>
+      </nav>
+    </div>
+  );
+}
 
-//   function handleSearchSubmit(e) {
-//     e.preventDefault();
-//   }
-
-//   function handleSearchChange(e) {
-//     setSearchValue(e.target.value);
-//   }
-
-//   return (
-//     <>
-//       <nav className={headerStyles.headerInner}>
-//         <div className={styles.leftSection}>
-//           <SearchIcon onClick={handleToggleSearch} />
-//           <form
-//             onSubmit={handleSearchSubmit}
-//             className={`${styles.searchForm} ${isSearchOpen ? styles.open : ''}`}
-//           >
-//             <input
-//               type="text"
-//               value={searchValue}
-//               onChange={handleSearchChange}
-//               placeholder="Search products"
-//               className={styles.searchInput}
-//             />
-//           </form>
-//         </div>
-
-//         <div className={styles.rightSection}>
-//           <Link to="/contact" className={styles.contactLink}>
-//             Contact
-//           </Link>
-
-//           <div className={styles.hamburgerButton}>
-//             <MenuIcon
-//               onClick={handleToggleMobileMenu}
-//               isOpen={isMobileMenuOpen}
-//             />
-//           </div>
-//         </div>
-//       </nav>
-//       {isMobileMenuOpen && (
-//         <div className={styles.mobileMenu}>
-//           <Link to="/contact" className={styles.mobileMenuLink}>
-//             Contact
-//           </Link>
-//         </div>
-//       )}
-//     </>
-//   );
-// }
-
-// export default HeaderMenu;
+export default HeaderMenu;
