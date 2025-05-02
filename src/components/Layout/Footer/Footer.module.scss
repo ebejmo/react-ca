@@ -1,0 +1,35 @@
+@use '../../../styles/variables.scss' as *;
+
+.footer {
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  font-size: $font-size-small;
+}
+
+.footerActions {
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  a {
+    color: red;
+  }
+}
+
+.footerBottom {
+  max-width: var(--max-width-content);
+  padding: var(--padding-content);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
