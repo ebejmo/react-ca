@@ -1,14 +1,12 @@
-import { Link } from 'react-router-dom';
 import CartIcon from '../../Icons/CartIcon/CartIcon';
 import styles from './HeaderActions.module.scss';
 import ThemeToggleIcon from '../../Icons/ThemeToggleIcon/ThemeToggleIcon';
+import Logo from '../../../Logo/Logo';
 
 function HeaderActions() {
   return (
     <div className={styles.actionsRow}>
-      <Link to="/" className={styles.logo} aria-label="SlapShop homepage">
-        SlapShop
-      </Link>
+      <Logo />
 
       <div className={styles.iconGroup}>
         <ThemeToggleIcon />
