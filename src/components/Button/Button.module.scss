@@ -1,11 +1,53 @@
 .button {
   font: inherit;
-  padding: 0.5rem 1.5rem;
   border-radius: var(--border-radius-small);
   font-weight: 400;
   cursor: pointer;
   border: none;
   transition: var(--transition-default);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.small {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.medium {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.large {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+
+.fullWidth {
+  width: 100%;
+  display: flex;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+
+  &.left {
+    margin-right: 0.5rem;
+  }
+  &.right {
+    margin-left: 0.5rem;
+  }
 }
 
 .primary {
