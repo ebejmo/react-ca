@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import PageLoader from '../../components/PageLoader/PageLoader';
+import SaleBanner from '../../components/Home/SaleBanner/SaleBanner';
+import HeroSection from '../../components/Home/HeroSection/HeroSection';
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,8 +18,9 @@ export default function HomePage() {
     return <PageLoader />;
   }
   return (
-    <div>
-      <h1>Welcome to SlapShop</h1>
-    </div>
+    <>
+      <SaleBanner />
+      <HeroSection />
+    </>
   );
 }

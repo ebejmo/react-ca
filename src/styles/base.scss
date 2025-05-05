@@ -11,15 +11,19 @@
   --color-primary: #999999;
   --color-primary-dark: #7a7a7a;
   --color-success: #06790a;
-  --color-error: #900608;
+  --color-danger: #900608;
   --color-accent: #d4af37;
 
   --color-border: #c4c4c4;
   --color-border-light: rgba(196, 196, 196, 0.2);
 
-  --button-primary-bg: #999999;
-  --button-primary-text: #000000;
-  --button-hover-bg: #7a7a7a;
+  --button-primary-color: #999999;
+  --button-dark-text: #000000;
+  --button-primary-hover: #7a7a7a;
+  --button-secondary-color: #ffffff;
+  --button-secondary-hover: #c4c4c4;
+  --button-danger-color: #900608;
+  --button-danger-hover: #700000;
 
   --font-family-base: 'Inter', Arial, sans-serif;
   --transition-default: all 0.3s ease-in-out;
@@ -57,6 +61,7 @@ body {
 main {
   margin: 0 auto;
   max-width: 1200px;
+  width: 100%;
   min-height: calc(100vh - 120px);
   padding: $spacing;
 }
@@ -89,12 +94,12 @@ img {
   display: block;
 }
 
-button {
-  font-family: inherit;
-  border: none;
-  cursor: pointer;
-  background-color: var(--color-primary);
-  color: var(--color-primary-text);
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-}
+// button {
+//   font-family: inherit;
+//   border: none;
+//   cursor: pointer;
+//   background-color: var(--color-primary);
+//   color: var(--color-primary-text);
+//   padding: 0.5rem 1rem;
+//   border-radius: 0.25rem;
+// }
