@@ -5,10 +5,13 @@ import styles from './CartIcon.module.scss';
 
 export default function CartIcon({ cartCount = 0 }) {
   const navigate = useNavigate();
+  function handleClick() {
+    navigate('/cart');
+  }
 
   return (
-    <IconButton onClick={() => navigate('/cart')} ariaLabel="View cart">
-      <LuShoppingCart className={styles.icon} />
+    <IconButton onClick={handleClick} ariaLabel="View cart">
+      <LuShoppingCart className="icon" />
       {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
     </IconButton>
   );
