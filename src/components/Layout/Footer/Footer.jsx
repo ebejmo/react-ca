@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import GithubIcon from '../Icons/GithubIcon/GithubIcon';
 import styles from './Footer.module.scss';
 import LinkedinIcon from '../Icons/LinkedinIcon/LinkedinIcon';
@@ -12,9 +11,7 @@ function Footer() {
         <LinkedinIcon />
       </div>
       <div className={styles.footerBottom}>
-        <Link to="/" className={styles.logo}>
-          <Logo variant="footer" />
-        </Link>
+        <Logo variant="footer" />
         <p className={styles.copy}>
           &copy; {new Date().getFullYear()} SlapShop. All rights reserved.
         </p>
