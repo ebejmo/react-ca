@@ -7,8 +7,8 @@ export default function HeroSection() {
       <div className={styles.overlay} />
       <div className={styles.content}>
         <h1>This is the Heading</h1>
-        <p>Discover Noroff Online Shop.</p>
-        <Button href="#products" variant="primary" size="medium">
+        <p>Discover Noroff Online Shop</p>
+        <Button href="#products" variant="primary" size="small" fullWidth>
           Shop Now
         </Button>
       </div>
