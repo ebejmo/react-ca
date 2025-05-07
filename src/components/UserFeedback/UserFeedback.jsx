@@ -8,6 +8,7 @@ export default function UserFeedback({
   message,
   onAction,
   buttonLabel = 'Retry',
+  icon,
 }) {
   const isError = type === 'error';
   const isSuccess = type === 'success';
@@ -16,12 +17,20 @@ export default function UserFeedback({
   if (isError) buttonVariant = 'danger';
   else if (isSuccess) buttonVariant = 'success';
 
+  const renderIcon = () => {
+    if (icon) return <span className={styles.icon}>{icon}</span>;
+    if (isError)
+      return <SadIcon className={styles.icon} aria-label="Error" role="img" />;
+    if (isSuccess)
+      return (
+        <HappyIcon className={styles.icon} aria-label="Success" role="img" />
+      );
+    return null;
+  };
+
   return (
     <Card className={styles.feedbackCard}>
-      <div className={`${styles.top} ${styles[type]}`}>
-        {isError && <SadIcon className={styles.icon} />}
-        {isSuccess && <HappyIcon className={styles.icon} />}
-      </div>
+      <div className={`${styles.top} ${styles[type]}`}>{renderIcon()}</div>
       <div className={styles.bottom}>
         <p>{message}</p>
         {onAction && (

@@ -6,3 +6,4 @@ export { default as HappyIcon } from './HappyIcon';
 export { default as SearchIcon } from './SearchIcon';
 export { default as ThemeToggleIcon } from './ThemeToggleIcon';
 export { default as MenuIcon } from './MenuIcon';
+export { default as BoxIcon } from './BoxIcon';

@@ -5,20 +5,18 @@ import { BASE_API_URL } from '../../api/constants';
 import PageLoader from '../../components/PageLoader/PageLoader';
 import ProductListWrapper from '../../features/Home/ProductList/ProductListWrapper';
 import UserFeedback from '../../components/UserFeedback/UserFeedback';
+import { refreshPage } from '../../utils/handlers';
 
 export default function HomePage() {
   const { data: products, isLoading, isError } = useApi(BASE_API_URL);
 
-  function reloadPage() {
-    window.location.reload();
-  }
   if (isLoading) return <PageLoader />;
   if (isError)
     return (
       <UserFeedback
-        message="Failed to load products. Please try again"
+        message="Oooops. Something went wrong. Please try again."
         type="error"
-        onAction={reloadPage}
+        onAction={refreshPage}
         buttonLabel="Retry"
       />
     );

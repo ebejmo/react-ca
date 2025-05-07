@@ -15,6 +15,10 @@
   color: var(--color-white);
   pointer-events: none;
 
+  &.info {
+    background-color: var(--color-primary);
+  }
+
   &.error {
     background-color: var(--color-danger);
   }
