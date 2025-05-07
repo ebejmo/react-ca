@@ -1,8 +1,7 @@
-import { PiSmileySad } from 'react-icons/pi';
-import { BiHappy } from 'react-icons/bi';
 import styles from './UserFeedback.module.scss';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
+import { HappyIcon, SadIcon } from '../Icons';
 
 export default function UserFeedback({
   type = 'info',
@@ -20,8 +19,8 @@ export default function UserFeedback({
   return (
     <Card className={styles.feedbackCard}>
       <div className={`${styles.top} ${styles[type]}`}>
-        {isError && <PiSmileySad className={styles.icon} />}
-        {isSuccess && <BiHappy className={styles.icon} />}
+        {isError && <SadIcon className={styles.icon} />}
+        {isSuccess && <HappyIcon className={styles.icon} />}
       </div>
       <div className={styles.bottom}>
         <p>{message}</p>

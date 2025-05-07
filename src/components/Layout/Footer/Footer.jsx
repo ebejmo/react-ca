@@ -1,7 +1,6 @@
-import GithubIcon from '../Icons/GithubIcon/GithubIcon';
 import styles from './Footer.module.scss';
-import LinkedinIcon from '../Icons/LinkedinIcon/LinkedinIcon';
 import Logo from '../../Logo/Logo';
+import { GithubIcon, LinkedinIcon } from '../../Icons';
 
 function Footer() {
   return (

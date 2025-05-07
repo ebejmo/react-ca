@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import SearchIcon from '../../Icons/SearchIcon/SearchIcon';
+import { SearchIcon } from '../../../Icons';
 import SearchBar from './SearchBar';
 import styles from './HeaderMenu.module.scss';
 

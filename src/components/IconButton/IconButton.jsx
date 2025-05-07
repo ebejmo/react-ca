@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import styles from './IconButton.module.scss';
-import Button from '../../../Button/Button';
+import Button from '../Button/Button';
 
 export default function IconButton({
   children,

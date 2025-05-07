@@ -1,6 +1,5 @@
-import CartIcon from '../../Icons/CartIcon/CartIcon';
 import styles from './HeaderActions.module.scss';
-import ThemeToggleIcon from '../../Icons/ThemeToggleIcon/ThemeToggleIcon';
+import { ThemeToggleIcon, CartIcon } from '../../../Icons';
 import Logo from '../../../Logo/Logo';
 
 function HeaderActions() {
