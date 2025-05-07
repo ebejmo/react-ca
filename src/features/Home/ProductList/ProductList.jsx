@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-// import { BASE_API_URL } from '../../../api/constants';
-// import useApi from '../../../hooks/useApi';
-// import PageLoader from '../../../components/PageLoader/PageLoader';
 
 export default function ProductList({ products = [] }) {
   return (

@@ -13,10 +13,16 @@ export default function useApi(url) {
         setIsLoading(true);
         setIsError(false);
         const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const json = await response.json();
         setData(json.data || json);
       } catch (error) {
         console.error('Error fetching products:', error);
+        setIsError(true);
       } finally {
         setIsLoading(false);
       }

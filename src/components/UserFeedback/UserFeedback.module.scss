@@ -1,0 +1,23 @@
+@use '../../styles/variables.scss' as *;
+
+.userFeedback {
+  padding: 1rem;
+  border-radius: var(--border-radius-small);
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 500px;
+}
+
+.info {
+}
+
+.warning {
+}
+
+.error {
+  background-color: var(--color-danger);
+}
+
+.success {
+  background-color: var(--color-success);
+}
