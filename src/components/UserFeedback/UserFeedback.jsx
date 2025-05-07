@@ -1,15 +1,41 @@
+import { PiSmileySad } from 'react-icons/pi';
+import { BiHappy } from 'react-icons/bi';
 import styles from './UserFeedback.module.scss';
+import Card from '../Card/Card';
+import Button from '../Button/Button';
 
 export default function UserFeedback({
-  message = 'Something went wrong.',
   type = 'info',
+  message,
+  onAction,
+  buttonLabel = 'Retry',
 }) {
+  const isError = type === 'error';
+  const isSuccess = type === 'success';
+
+  let buttonVariant = 'primary';
+  if (isError) buttonVariant = 'danger';
+  else if (isSuccess) buttonVariant = 'success';
+
   return (
-    <div
-      className={`${styles.userFeedback} ${styles[type]}`}
-      role={type === 'error' ? 'alert' : 'status'}
-    >
-      {message}
-    </div>
+    <Card className={styles.feedbackCard}>
+      <div className={`${styles.top} ${styles[type]}`}>
+        {isError && <PiSmileySad className={styles.icon} />}
+        {isSuccess && <BiHappy className={styles.icon} />}
+      </div>
+      <div className={styles.bottom}>
+        <p>{message}</p>
+        {onAction && (
+          <Button
+            variant={buttonVariant}
+            onClick={onAction}
+            size="medium"
+            fullWidth
+          >
+            {buttonLabel}
+          </Button>
+        )}
+      </div>
+    </Card>
   );
 }

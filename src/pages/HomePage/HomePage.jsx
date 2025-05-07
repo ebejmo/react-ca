@@ -9,12 +9,17 @@ import UserFeedback from '../../components/UserFeedback/UserFeedback';
 export default function HomePage() {
   const { data: products, isLoading, isError } = useApi(BASE_API_URL);
 
+  function reloadPage() {
+    window.location.reload();
+  }
   if (isLoading) return <PageLoader />;
   if (isError)
     return (
       <UserFeedback
         message="Failed to load products. Please try again"
         type="error"
+        onAction={reloadPage}
+        buttonLabel="Retry"
       />
     );
 

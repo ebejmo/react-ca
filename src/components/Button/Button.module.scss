@@ -77,4 +77,13 @@
   &:hover {
     background-color: var(--button-danger-hover);
   }
+
+  .success {
+    background-color: var(--button-danger-success);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--button-danger-success);
+    }
+  }
 }

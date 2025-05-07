@@ -1,23 +1,35 @@
 @use '../../styles/variables.scss' as *;
 
-.userFeedback {
-  padding: 1rem;
-  border-radius: var(--border-radius-small);
+.feedbackCard {
   text-align: center;
   margin: 4rem auto;
-  max-width: 500px;
+  max-width: 300px;
+  text-align: center;
 }
 
-.info {
+.top {
+  padding: 2rem;
+  color: var(--color-white);
+
+  &.error {
+    background-color: var(--color-danger);
+  }
+
+  &.success {
+    background-color: var(--color-success);
+  }
 }
 
-.warning {
+.icon {
+  font-size: 4rem;
 }
 
-.error {
-  background-color: var(--color-danger);
-}
+.bottom {
+  background-color: var(--color-white);
+  padding: var(--padding-content);
 
-.success {
-  background-color: var(--color-success);
+  p {
+    margin-bottom: 1rem;
+    color: var(--color-bg);
+  }
 }
