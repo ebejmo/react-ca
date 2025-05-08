@@ -5,3 +5,7 @@ export function refreshPage() {
 export function goBack(navigate) {
   navigate(-1);
 }
+
+export function goHome(navigate) {
+  navigate('/');
+}

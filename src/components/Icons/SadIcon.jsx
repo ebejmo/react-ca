@@ -1,10 +1,11 @@
 import { PiSmileySad } from 'react-icons/pi';
-import IconButton from '../IconButton/IconButton';
 
-export default function SadIcon({ className = '' }) {
+export default function SadIcon({
+  className,
+  ariaLabel = 'Sad icon',
+  role = 'img',
+}) {
   return (
-    <IconButton ariaLabel="Error icon">
-      <PiSmileySad className={className} />
-    </IconButton>
+    <PiSmileySad className={className} aria-label={ariaLabel} role={role} />
   );
 }
