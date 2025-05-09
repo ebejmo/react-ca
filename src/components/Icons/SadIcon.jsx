@@ -2,7 +2,7 @@ import { PiSmileySad } from 'react-icons/pi';
 
 export default function SadIcon({
   className,
-  ariaLabel = 'Sad icon',
+  ariaLabel = 'Error icon',
   role = 'img',
 }) {
   return (

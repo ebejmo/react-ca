@@ -3,7 +3,7 @@
 .feedbackCard {
   text-align: center;
   margin: 4rem auto;
-  max-width: 300px;
+  max-width: 18rem;
   text-align: center;
 }
 
@@ -13,7 +13,6 @@
   justify-content: center;
   padding: 2rem;
   color: var(--color-white);
-  pointer-events: none;
 
   &.info {
     background-color: var(--color-primary);
@@ -28,8 +27,9 @@
   }
 }
 
-.icon {
-  font-size: 4rem;
+.icon svg {
+  height: 4rem;
+  width: 4rem;
 }
 
 .bottom {
@@ -39,5 +39,9 @@
   p {
     margin-bottom: 1rem;
     color: var(--color-bg);
+  }
+
+  button {
+    margin-bottom: 0.5rem;
   }
 }

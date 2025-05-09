@@ -19,12 +19,8 @@ export default function UserFeedback({
 
   const renderIcon = () => {
     if (icon) return <span className={styles.icon}>{icon}</span>;
-    if (isError)
-      return <SadIcon className={styles.icon} aria-label="Error" role="img" />;
-    if (isSuccess)
-      return (
-        <HappyIcon className={styles.icon} aria-label="Success" role="img" />
-      );
+    if (isError) return <SadIcon className={styles.icon} />;
+    if (isSuccess) return <HappyIcon className={styles.icon} />;
     return null;
   };
 

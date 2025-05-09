@@ -7,3 +7,5 @@ export { default as SearchIcon } from './SearchIcon';
 export { default as ThemeToggleIcon } from './ThemeToggleIcon';
 export { default as MenuIcon } from './MenuIcon';
 export { default as BoxIcon } from './BoxIcon';
+export { default as StarFilled } from './StarFilled';
+export { default as StarOutLine } from './StarOutline';

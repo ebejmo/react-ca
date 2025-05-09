@@ -1,0 +1,11 @@
+@use '../../styles/variables.scss' as *;
+
+.addToCartBtn {
+  transition: background-color var(--transition-default);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-text-dark);
+}
