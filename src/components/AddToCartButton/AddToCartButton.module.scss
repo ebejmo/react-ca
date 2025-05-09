@@ -1,11 +1,22 @@
 @use '../../styles/variables.scss' as *;
 
 .addToCartBtn {
-  transition: background-color var(--transition-default);
+  transform: scale(1);
+  filter: brightness(1);
+
+  transition:
+    transform 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+    fill: var(--color-black);
+  }
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   fill: var(--color-text-dark);
 }

@@ -1,4 +1,4 @@
-import { MdOutlineAddCircleOutline } from 'react-icons/md';
+import { BiCartAdd } from 'react-icons/bi';
 import IconButton from '../IconButton/IconButton';
 import styles from './AddToCartButton.module.scss';
 
@@ -9,7 +9,7 @@ export default function AddToCartButton({ onClick }) {
       ariaLabel="Add to cart"
       className={styles.addToCartBtn}
     >
-      <MdOutlineAddCircleOutline className={styles.icon} />
+      <BiCartAdd className={styles.icon} />
     </IconButton>
   );
 }
