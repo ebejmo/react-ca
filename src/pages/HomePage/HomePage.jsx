@@ -21,7 +21,6 @@ export default function HomePage() {
       />
     );
 
-  console.log('Fetched products:', products);
   return (
     <>
       <SaleBanner />

@@ -18,7 +18,7 @@ function HeaderMenu() {
         <SearchBar isOpen={isSearchOpen} />
       </div>
       <nav className={styles.right}>
-        <Link to="/contact" className={styles.link}>
+        <Link to="/contact" className="navigation-link">
           Contact
         </Link>
       </nav>

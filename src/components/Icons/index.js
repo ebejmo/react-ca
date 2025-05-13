@@ -9,3 +9,4 @@ export { default as MenuIcon } from './MenuIcon';
 export { default as BoxIcon } from './BoxIcon';
 export { default as StarFilled } from './StarFilled';
 export { default as StarOutLine } from './StarOutline';
+export { default as RightIcon } from './RightIcon';
