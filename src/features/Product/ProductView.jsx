@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ProductHeader from './ProductHeader';
+import ProductCardFull from '../../components/ProductCard/ProductCardFull';
 
 export default function ProductView({ product }) {
   useEffect(() => {
@@ -7,9 +8,9 @@ export default function ProductView({ product }) {
   }, [product]);
 
   return (
-    <div>
+    <>
       <ProductHeader title={product.title} />
-      <h1>{product.title}</h1>
-    </div>
+      <ProductCardFull product={product} />
+    </>
   );
 }

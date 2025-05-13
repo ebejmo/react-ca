@@ -1,4 +1,4 @@
-import ProductCard from './ProductCard/ProductCard';
+import ProductCardHome from '../../../components/ProductCard/ProductCardHome';
 import styles from './ProductList.module.scss';
 
 export default function ProductList({ products = [] }) {
@@ -8,7 +8,7 @@ export default function ProductList({ products = [] }) {
       <p>All products</p>
       <section id="products" className={styles.grid}>
         {products.map((p) => (
-          <ProductCard key={p.id} product={p} />
+          <ProductCardHome key={p.id} product={p} />
         ))}
       </section>
     </>
