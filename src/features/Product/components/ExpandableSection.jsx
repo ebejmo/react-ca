@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styles from './Exbandable.module.scss';
+import styles from './Expandable.module.scss';
 import Button from '../../../components/Button/Button';
 
-export default function ExpandableSection({ label, children }) {
+export default function ExpandableSection({ label, children, className }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleToggle() {
@@ -10,14 +10,16 @@ export default function ExpandableSection({ label, children }) {
   }
 
   return (
-    <div className={styles.section}>
+    <div className={`${styles.section} ${className || ''}`}>
       <Button
         className={styles.toggle}
         onClick={handleToggle}
         aria-expanded={isOpen}
       >
-        <span className={styles.label}>{label}</span>
-        <span className={styles.icon}>{isOpen ? '-' : '+'}</span>
+        <div className={styles.labelWrapper}>
+          <span className={styles.label}>{label}</span>
+          <span className={styles.icon}>{isOpen ? '-' : '+'}</span>
+        </div>
       </Button>
 
       <div

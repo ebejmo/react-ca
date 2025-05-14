@@ -26,10 +26,18 @@ export function RatingOverlay({ rating, count }) {
   );
 }
 
-export function ProductInfo({ title, price, discountedPrice, children }) {
+export function ProductInfo({
+  title,
+  description,
+  price,
+  discountedPrice,
+  children,
+}) {
   return (
     <div className={styles.body}>
       <p className={styles.title}>{title}</p>
+
+      {description && <p className={styles.description}>{description}</p>}
       <PriceSection price={price} discountedPrice={discountedPrice} />
       {children}
     </div>
