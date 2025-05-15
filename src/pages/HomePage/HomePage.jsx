@@ -6,6 +6,7 @@ import PageLoader from '../../components/PageLoader/PageLoader';
 import ProductListWrapper from '../../features/Home/ProductList/ProductListWrapper';
 import UserFeedback from '../../components/UserFeedback/UserFeedback';
 import { refreshPage } from '../../utils/handlers';
+import SearchSection from '../../features/Home/Search/SearchSection';
 
 export default function HomePage() {
   const { data: products, isLoading, isError } = useApi(BASE_API_URL);
@@ -25,6 +26,7 @@ export default function HomePage() {
     <>
       <SaleBanner />
       <HeroSection />
+      <SearchSection products={products} />
       <ProductListWrapper products={products} />
     </>
   );
