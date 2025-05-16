@@ -11,7 +11,7 @@ export default function ProductCardHome({ product }) {
         <ProductCardBase product={product} />
       </Link>
       <div className={styles.actions}>
-        <AddToCartButton />
+        <AddToCartButton product={product} />
       </div>
     </Card>
   );

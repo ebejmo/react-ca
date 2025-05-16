@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import styles from './Search.module.scss';
 
 export default function SearchResults({ results, isVisible }) {
-  console.log('SearchResults visible:', isVisible, 'Results:', results);
-
   if (!isVisible) return null;
 
   if (results.length === 0) {

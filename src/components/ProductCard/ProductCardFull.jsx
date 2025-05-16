@@ -3,8 +3,15 @@ import { ProductImage, ProductInfo } from './ProductCardBase';
 import styles from './ProductCard.module.scss';
 import Button from '../Button/Button';
 import ProductReviews from '../../features/Product/components/ProductReviews';
+import { useCart } from '../../contexts/CartContext';
 
 export default function ProductCardFull({ product }) {
+  const { addToCart } = useCart();
+
+  function handleAddToCart() {
+    addToCart(product);
+  }
+
   return (
     <>
       <Card className={styles.productCardFull}>
@@ -24,7 +31,12 @@ export default function ProductCardFull({ product }) {
               discountedPrice={product.discountedPrice}
             >
               <div className={styles.buttonWrapper}>
-                <Button variant="primary" size="small" fullWidth>
+                <Button
+                  onClick={handleAddToCart}
+                  variant="primary"
+                  size="small"
+                  fullWidth
+                >
                   Add to cart
                 </Button>
               </div>

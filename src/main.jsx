@@ -5,13 +5,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
 import { darkTheme } from './styles/theme';
+import { CartProvider } from './contexts/CartContext';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <ThemeProvider theme={darkTheme}>
-        <App />
-      </ThemeProvider>
+      <CartProvider>
+        <ThemeProvider theme={darkTheme}>
+          <App />
+        </ThemeProvider>
+      </CartProvider>
     </BrowserRouter>
   </StrictMode>
 );
