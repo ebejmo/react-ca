@@ -1,24 +1,14 @@
-import { useState } from 'react';
 import Card from '../Card/Card';
 import { ProductImage, ProductInfo } from './ProductCardBase';
 import styles from './ProductCard.module.scss';
 import Button from '../Button/Button';
 import ProductReviews from '../../features/Product/components/ProductReviews';
-import { useCart } from '../../contexts/CartContext';
 import CartFeedback from '../CartFeedback/CartFeedback';
+import useCartFeedback from '../../hooks/useCartFeedback';
 
 export default function ProductCardFull({ product }) {
-  const { addToCart } = useCart();
-  const [showFeedback, setShowFeedback] = useState(false);
-
-  function handleAddToCart() {
-    addToCart(product);
-    setShowFeedback(true);
-  }
-
-  function handleHideFeedback() {
-    setShowFeedback(false);
-  }
+  const { showFeedback, handleAddToCart, handleHideFeedback } =
+    useCartFeedback(product);
 
   return (
     <>
