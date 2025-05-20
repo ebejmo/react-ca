@@ -1,0 +1,18 @@
+@use '../../styles/variables.scss' as *;
+
+.cartGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0rem;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  & > * {
+    flex: 1;
+  }
+}
