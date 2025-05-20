@@ -1,27 +1,5 @@
 @use '../../styles/variables.scss' as *;
 
-.breadcrumb {
-  font-size: $font-size-small;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-
-  a {
-    line-height: 1;
-  }
-
-  .separator {
-    font-size: 0.75rem;
-    margin: 0 0.5rem;
-    font-weight: bold;
-    user-select: none;
-  }
-
-  span:last-child {
-    color: var(--color-primary);
-  }
-}
-
 .imageWrapper {
   width: 100%;
   max-height: 400px;

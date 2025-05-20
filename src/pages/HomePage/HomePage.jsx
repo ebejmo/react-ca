@@ -7,8 +7,10 @@ import ProductListWrapper from '../../features/Home/ProductList/ProductListWrapp
 import UserFeedback from '../../components/UserFeedback/UserFeedback';
 import { refreshPage } from '../../utils/handlers';
 import SearchSection from '../../features/Home/Search/SearchSection';
+import usePageTitle from '../../hooks/usePageTitle';
 
 export default function HomePage() {
+  usePageTitle('Home');
   const { data: products, isLoading, isError } = useApi(BASE_API_URL);
 
   if (isLoading) return <PageLoader />;

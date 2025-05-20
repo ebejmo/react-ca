@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import styles from './ProductPage.module.scss';
-import { RightIcon } from '../../components/Icons';
+import { RightIcon } from '../Icons';
+import styles from './Breadcrumb.module.scss';
 
-export default function ProductHeader({ title }) {
+export default function Breadcrumb({ title }) {
   return (
     <nav className={styles.breadcrumb} aria-label="Breadcrumb">
       <Link to="/" className="navigation-link">

@@ -1,15 +1,13 @@
-import { useEffect } from 'react';
-import ProductHeader from './ProductHeader';
 import ProductCardFull from '../../components/ProductCard/ProductCardFull';
+import usePageTitle from '../../hooks/usePageTitle';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 
 export default function ProductView({ product }) {
-  useEffect(() => {
-    document.title = `SlapShop | ${product.title}`;
-  }, [product]);
+  usePageTitle(product.title);
 
   return (
     <>
-      <ProductHeader title={product.title} />
+      <Breadcrumb title={product.title} />
       <ProductCardFull product={product} />
     </>
   );
