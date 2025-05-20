@@ -1,7 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import { HomePage, NotFoundPage, ProductPage, CartPage } from './pages';
+import {
+  HomePage,
+  NotFoundPage,
+  ProductPage,
+  CartPage,
+  CheckoutSuccessPage,
+} from './pages';
 import PageWrapper from './components/Layout/PageWrapper';
 
 function App() {
@@ -12,6 +18,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="product/:id" element={<ProductPage />} />
           <Route path="cart" element={<CartPage />} />
+          <Route path="checkout-success" element={<CheckoutSuccessPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

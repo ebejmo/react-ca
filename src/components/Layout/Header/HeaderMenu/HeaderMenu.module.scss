@@ -3,6 +3,7 @@
 
 .menuRow {
   @include rowWrapper;
+  flex-direction: row-reverse;
 }
 
 .links {

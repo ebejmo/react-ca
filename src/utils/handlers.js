@@ -7,5 +7,5 @@ export function goBack(navigate) {
 }
 
 export function goHome(navigate) {
-  navigate('/');
+  return () => navigate('/');
 }

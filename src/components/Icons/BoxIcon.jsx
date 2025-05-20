@@ -1,7 +1,7 @@
 import { FiPackage } from 'react-icons/fi';
 
 export default function BoxIcon({
-  className,
+  className = '',
   ariaLabel = 'No products',
   role = 'img',
 }) {

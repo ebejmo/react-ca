@@ -8,7 +8,7 @@ export default function ProductListWrapper({ products }) {
       <UserFeedback
         message="Looks like there is no products available right now. Please try again later!"
         type="info"
-        icon={<BoxIcon />}
+        icon={<BoxIcon className="icon" />}
       />
     );
   }
