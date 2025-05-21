@@ -1,3 +1,13 @@
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import usePageTitle from '../../hooks/usePageTitle';
+
 export default function ContactPage() {
-  return <h1>Hello contact page</h1>;
+  usePageTitle('Contact');
+  return (
+    <>
+      <Breadcrumb title="Contact" />
+      <ContactForm />
+    </>
+  );
 }

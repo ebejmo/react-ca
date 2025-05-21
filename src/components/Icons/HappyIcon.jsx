@@ -5,5 +5,5 @@ export default function HappyIcon({
   ariaLabel = 'Success icon',
   role = 'img',
 }) {
-  return <BiHappy className={className} ariaLabel={ariaLabel} role={role} />;
+  return <BiHappy className={className} aria-label={ariaLabel} role={role} />;
 }
