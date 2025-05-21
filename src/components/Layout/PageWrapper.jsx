@@ -1,11 +1,5 @@
-import styled from 'styled-components';
+import styles from './PageWrapper.module.scss';
 
-const PageWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  color: ${(props) => props.theme.colors.text};
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
-
-export default PageWrapper;
+export default function PageWrapper({ children }) {
+  return <div className={styles.pageWrapper}>{children}</div>;
+}

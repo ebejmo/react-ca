@@ -1,46 +1,47 @@
 @use './variables' as *;
+@import './themes.scss';
 
-:root {
-  --color-bg: #1a1a1a;
-  --color-header: #000000;
+// :root {
+//   --color-bg: #1a1a1a;
+//   --color-header: #000000;
 
-  --color-text: #f1f1f1;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-text-dark: #333333;
-  --color-text-grey: #666666;
+//   --color-text: #f1f1f1;
+//   --color-white: #ffffff;
+//   --color-black: #000000;
+//   --color-text-dark: #333333;
+//   --color-text-grey: #666666;
 
-  --color-primary: #999999;
-  --color-primary-dark: #7a7a7a;
-  --color-success: #06790a;
-  --color-danger: #d32f2f;
-  --color-accent: #d4af37;
+//   --color-primary: #999999;
+//   --color-primary-dark: #7a7a7a;
+//   --color-success: #06790a;
+//   --color-danger: #d32f2f;
+//   --color-accent: #d4af37;
 
-  --color-border: #c4c4c4;
-  --color-border-light: rgba(196, 196, 196, 0.2);
+//   --color-border: #c4c4c4;
+//   --color-border-light: rgba(196, 196, 196, 0.2);
 
-  --button-primary-color: #999999;
-  --button-dark-text: #000000;
-  --button-primary-hover: #7a7a7a;
-  --button-secondary-color: #ffffff;
-  --button-secondary-hover: #c4c4c4;
-  --button-danger-color: #d32f2f;
-  --button-danger-hover: #700000;
-  --button-success-color: #06790a;
-  --button-success-hover: #046307;
+//   --button-primary-color: #999999;
+//   --button-dark-text: #000000;
+//   --button-primary-hover: #7a7a7a;
+//   --button-secondary-color: #ffffff;
+//   --button-secondary-hover: #c4c4c4;
+//   --button-danger-color: #d32f2f;
+//   --button-danger-hover: #700000;
+//   --button-success-color: #06790a;
+//   --button-success-hover: #046307;
 
-  --font-family-base: 'Inter', Arial, sans-serif;
-  --transition-default: all 0.3s ease-in-out;
+//   --font-family-base: 'Inter', Arial, sans-serif;
+//   --transition-default: all 0.3s ease-in-out;
 
-  --border-radius-small: 4px;
-  --border-radius-large: 12px;
+//   --border-radius-small: 4px;
+//   --border-radius-large: 12px;
 
-  --z-index-header: 100;
-  --z-index-modal: 1000;
+//   --z-index-header: 100;
+//   --z-index-modal: 1000;
 
-  --max-width-content: 1200px;
-  --padding-content: 1.2rem;
-}
+//   --max-width-content: 1200px;
+//   --padding-content: 1.2rem;
+// }
 
 *,
 *::before,

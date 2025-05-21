@@ -35,8 +35,8 @@
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-small);
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--color-text);
+  color: var(--color-bg);
   transition: var(--transition-default);
 
   &:focus {
@@ -51,8 +51,8 @@
   top: 100%;
   left: 0;
   width: 100%;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-bg);
+  background-color: var(--color-text);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-small);
   padding: 0.5rem 1rem;
@@ -71,7 +71,7 @@
   display: block;
   padding: 0.5rem 0;
   font-size: $font-size-small;
-  color: var(--color-black);
+  color: var(--color-bg);
   text-decoration: none;
   transition: background-color 0.2s ease;
 
