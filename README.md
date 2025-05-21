@@ -1,14 +1,29 @@
-# React + Vite
+# SlapShop
 
-SlapShop is a modern React-based eCommerce frontend built with Vite, SCSS, and Styled Components, featuring a dark theme, responsive design, and clean real-world project structure, powered by the Noroff Online Shop API.
+SlapShop is a modern eCommerce frontend built with React, featuring a clean dark UI, responsive layout, and integration with the Noroff online shop API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- Browse products with dynamic discount display
+- Search with autocomplete-style filtering
+- Product detail pages with "Add to Cart"
+- Cart with quantity grouping and total calculation
+- Checkout flow with success confirmation
+- Contact form with validation using `react-hook-form` and `yup`
+- Accessible icons, custom buttons, and user feedback messages
+- Responsive design with mobile-first layout
+- Hosted on Netlify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React + Vite
+- React Router
+- SCSS Modules
+- react-hook-form + yup
+- Netlify for deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## API
+
+All data is powered by [Noroff Online Shop API](https://v2.api.noroff.dev/online-shop)
+
+---
