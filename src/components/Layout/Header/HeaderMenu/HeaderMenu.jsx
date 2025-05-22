@@ -5,7 +5,7 @@ function HeaderMenu() {
   return (
     <div className={styles.menuRow}>
       <nav className={styles.links}>
-        <Link to="/contact" className="navigation-link">
+        <Link to="/contact" className="navigation-link nav-header">
           Contact
         </Link>
       </nav>

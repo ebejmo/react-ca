@@ -1,6 +1,13 @@
 :root {
+  --transition-default: all 0.3s ease-in-out;
   --color-bg: #1a1a1a;
   --color-header: #000000;
+
+  --color-card-bg: #f1f1f1;
+  --color-card-text: #333333;
+  --color-card-muted: #666666;
+
+  --color-icon-theme: #333333;
 
   --color-text: #f1f1f1;
   --color-white: #ffffff;
@@ -8,14 +15,16 @@
   --color-text-dark: #333333;
   --color-text-grey: #666666;
 
+  --icon-color-default: var(--color-white);
+
   --color-primary: #999999;
   --color-primary-dark: #7a7a7a;
   --color-success: #06790a;
   --color-danger: #d32f2f;
   --color-accent: #d4af37;
 
-  --color-border: #c4c4c4;
-  --color-border-light: rgba(196, 196, 196, 0.2);
+  --color-border: #555555;
+  --color-border-light: #c4c4c433;
 
   --button-primary-color: #999999;
   --button-dark-text: #000000;
@@ -28,7 +37,6 @@
   --button-success-hover: #046307;
 
   --font-family-base: 'Inter', Arial, sans-serif;
-  --transition-default: all 0.3s ease-in-out;
 
   --border-radius-small: 4px;
   --border-radius-large: 12px;
@@ -44,4 +52,16 @@
   --color-bg: #f9f9f9;
   --color-text: #222222;
   --color-header: #000000;
+
+  --color-card-bg: #222222;
+  --color-card-text: #f9f9f9;
+  --color-card-muted: #bbbbbb;
+
+  --color-icon-theme: #f9f9f9;
+  --icon-color-default: #222222;
+
+  --button-secondary-color: #222222;
+  --button-secondary-hover: #000000;
+
+  --color-border-light: #b1b0b0c3;
 }

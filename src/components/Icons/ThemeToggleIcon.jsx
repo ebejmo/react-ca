@@ -8,9 +8,9 @@ export default function ThemeToggleIcon() {
   return (
     <IconButton onClick={toggleTheme} ariaLabel="Toggle theme">
       {theme === 'dark' ? (
-        <LuSun className="icon" />
+        <LuSun className="icon icon-header" />
       ) : (
-        <LuMoon className="icon" />
+        <LuMoon className="icon icon-header" />
       )}
     </IconButton>
   );

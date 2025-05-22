@@ -1,6 +1,7 @@
 @use '../../../styles/variables.scss' as *;
 
 .footer {
+  margin-top: 1rem;
   background-color: var(--color-accent);
   color: var(--color-black);
   font-size: $font-size-small;

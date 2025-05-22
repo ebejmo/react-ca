@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: var(--color-text-dark);
+  color: var(--color-card-text);
 }
 
 .header {
@@ -52,12 +52,12 @@
 .rowDetails {
   margin: 0;
   font-size: $font-size-small;
-  color: var(--color-gray-dark);
+  // color: var(--color-gray-dark);
 }
 
 .total {
   margin: 0;
   font-weight: 500;
   font-size: $font-size-base;
-  color: var(--color-text-dark);
+  // color: var(--color-text-dark);
 }

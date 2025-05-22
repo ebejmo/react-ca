@@ -51,8 +51,8 @@
   top: 100%;
   left: 0;
   width: 100%;
-  color: var(--color-bg);
-  background-color: var(--color-text);
+  color: var(--color-card-text);
+  background-color: var(--color-card-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-small);
   padding: 0.5rem 1rem;
@@ -71,7 +71,7 @@
   display: block;
   padding: 0.5rem 0;
   font-size: $font-size-small;
-  color: var(--color-bg);
+  color: var(--color-card-text);
   text-decoration: none;
   transition: background-color 0.2s ease;
 
@@ -82,4 +82,8 @@
 
 .noResults {
   font-size: $font-size-small;
+}
+
+.icon {
+  color: red;
 }

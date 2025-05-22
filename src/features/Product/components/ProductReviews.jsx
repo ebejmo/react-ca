@@ -8,7 +8,8 @@ export default function ProductReviews({ reviews }) {
         <ul className={styles.reviewList}>
           {reviews.map((review) => (
             <li key={review.id}>
-              <strong>{review.username}</strong> {review.description}
+              <span className={styles.reviewName}>{review.username}</span>{' '}
+              {review.description}
             </li>
           ))}
         </ul>

@@ -7,7 +7,7 @@ import styles from './CartIcon.module.scss';
 export default function CartIcon() {
   const navigate = useNavigate();
   const { cart } = useCart();
-  console.log('Cart contents:', cart);
+
   const cartCount = cart.length;
 
   function handleClick() {
@@ -16,7 +16,7 @@ export default function CartIcon() {
 
   return (
     <IconButton onClick={handleClick} ariaLabel="View cart">
-      <LuShoppingCart className="icon" />
+      <LuShoppingCart className="icon icon-header" />
       {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
     </IconButton>
   );

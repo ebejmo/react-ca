@@ -63,7 +63,7 @@
 
 .ratingCount {
   font-size: $font-size-base;
-  color: var(--color-text-dark);
+  color: var(--color-card-text);
   margin-left: 1rem;
   line-height: 1;
 }
@@ -73,7 +73,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  color: var(--color-text-dark);
+  color: var(--color-card-text);
 }
 
 .title {
@@ -110,14 +110,14 @@
 }
 
 .pricingOriginal {
-  color: var(--color-text-grey);
+  color: var(--color-card-muted);
   font-size: $font-size-xs;
   text-decoration: line-through;
 }
 
 .discountBadge {
   background-color: var(--color-accent);
-  color: var(--color-text-dark);
+  color: var(--color-card-text);
   font-size: $font-size-xs;
   padding: 0.15rem 0.2rem;
   border-radius: var(--border-radius-small);
@@ -182,12 +182,16 @@
 }
 
 .reviewList {
+  list-style: circle;
   margin-top: 0.5rem;
   padding-left: 1rem;
-  list-style: disc;
 
   li {
     margin-bottom: 0.5rem;
     font-size: $font-size-small;
+  }
+
+  .reviewName {
+    font-weight: 500;
   }
 }
