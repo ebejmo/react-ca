@@ -1,5 +1,5 @@
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
-import ContactForm from '../../components/ContactForm/ContactForm';
+import ContactForm from '../../features/ContactForm/ContactForm';
 import usePageTitle from '../../hooks/usePageTitle';
 
 export default function ContactPage() {

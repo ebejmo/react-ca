@@ -5,8 +5,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useState, useId } from 'react';
 import contactSchema from '../../validation/contactSchema';
 import styles from './ContactForm.module.scss';
-import UserFeedback from '../UserFeedback/UserFeedback';
-import Button from '../Button/Button';
+import UserFeedback from '../../components/UserFeedback/UserFeedback';
+import Button from '../../components/Button/Button';
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Expandable.module.scss';
-import Button from '../../../components/Button/Button';
+import Button from '../../components/Button/Button';
 
 export default function ExpandableSection({ label, children, className }) {
   const [isOpen, setIsOpen] = useState(false);

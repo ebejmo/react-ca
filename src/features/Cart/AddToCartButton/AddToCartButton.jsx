@@ -1,5 +1,5 @@
 import { BiCartAdd } from 'react-icons/bi';
-import IconButton from '../IconButton/IconButton';
+import IconButton from '../../../components/IconButton/IconButton';
 import styles from './AddToCartButton.module.scss';
 
 export default function AddToCartButton({ onClick }) {

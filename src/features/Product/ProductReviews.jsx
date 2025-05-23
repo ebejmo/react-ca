@@ -1,5 +1,5 @@
 import ExpandableSection from './ExpandableSection';
-import styles from '../../../components/ProductCard/ProductCard.module.scss';
+import styles from '../../components/ProductCard/ProductCard.module.scss';
 
 export default function ProductReviews({ reviews }) {
   return (
