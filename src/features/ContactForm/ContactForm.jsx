@@ -4,12 +4,16 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState, useId } from 'react';
 import contactSchema from '../../validation/contactSchema';
-import styles from './ContactForm.module.scss';
 import UserFeedback from '../../components/UserFeedback/UserFeedback';
 import Button from '../../components/Button/Button';
+import Spinner from '../../components/Spinner/Spinner';
+import ContactFormInputs from './ContactFormInputs';
+import styles from './ContactForm.module.scss';
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [showForm, setShowForm] = useState(true);
 
   const {
     register,
@@ -27,50 +31,47 @@ export default function ContactForm() {
 
   function onSubmit(data) {
     console.log('Contact Form Submitted:', data);
-    setIsSubmitted(true);
-    reset();
+    setIsSending(true);
+
+    setTimeout(() => {
+      setIsSending(false);
+      setShowForm(false);
+      setIsSubmitted(true);
+      reset();
+    }, 1200);
   }
 
   return (
     <div className={styles.contactWrapper}>
       <h1>Contact Us</h1>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className={styles.field}>
-          <label htmlFor={nameId}>Full Name</label>
-          <input id={nameId} {...register('fullName')} />
-          <p className={styles.error}>{errors.fullName?.message}</p>
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor={subjectId}>Subject</label>
-          <input id={subjectId} {...register('subject')} />
-          <p className={styles.error}>{errors.subject?.message}</p>
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor={emailId}>Email</label>
-          <input id={emailId} type="email" {...register('email')} />
-          <p className={styles.error}>{errors.email?.message}</p>
-        </div>
-
-        <div className={styles.field}>
-          <label htmlFor={bodyId}>Message</label>
-          <textarea id={bodyId} rows="5" {...register('body')} />
-          <p className={styles.error}>{errors.body?.message}</p>
-        </div>
-
-        <Button
-          type="submit"
-          variant="primary"
-          size="small"
-          disabled={isSubmitting}
+      {showForm && (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+          className={styles.form}
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
-        </Button>
-      </form>
+          <ContactFormInputs
+            register={register}
+            errors={errors}
+            nameId={nameId}
+            subjectId={subjectId}
+            emailId={emailId}
+            bodyId={bodyId}
+          />
+          <Button
+            type="submit"
+            variant="primary"
+            size="small"
+            disabled={isSubmitting || isSending}
+          >
+            {isSubmitting || isSending ? 'Sending...' : 'Send Message'}
+          </Button>
+        </form>
+      )}
+      {isSending && <Spinner size="large" />}
 
-      {isSubmitted && (
+      {isSubmitted && !isSending && (
         <UserFeedback
           type="success"
           message="Thanks for reaching out! We'll get back to you soon."
