@@ -1,5 +1,5 @@
 import Card from '../../components/Card/Card';
-import RemoveFromCartButton from '../../components/RemoveFromCart/RemoveFromCartButton';
+import RemoveFromCartButton from './RemoveFromCart/RemoveFromCartButton';
 import { useCart } from '../../contexts/CartContext';
 import styles from './CartItemCard.module.scss';
 

@@ -2,8 +2,8 @@ import Card from '../Card/Card';
 import { ProductImage, ProductInfo } from './ProductCardBase';
 import styles from './ProductCard.module.scss';
 import Button from '../Button/Button';
-import ProductReviews from '../../features/Product/components/ProductReviews';
-import CartFeedback from '../CartFeedback/CartFeedback';
+import ProductReviews from '../../features/Product/ProductReviews';
+import CartFeedback from '../../features/Cart/CartFeedback';
 import useCartFeedback from '../../hooks/useCartFeedback';
 
 export default function ProductCardFull({ product }) {

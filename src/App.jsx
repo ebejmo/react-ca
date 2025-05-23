@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
+import { Layout } from './Layout';
 import {
   HomePage,
   NotFoundPage,
@@ -9,7 +9,7 @@ import {
   CheckoutSuccessPage,
   ContactPage,
 } from './pages';
-import PageWrapper from './components/Layout/PageWrapper';
+import PageWrapper from './Layout/PageWrapper';
 
 function App() {
   return (
