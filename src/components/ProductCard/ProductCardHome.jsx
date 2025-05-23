@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ProductCardBase from './ProductCardBase';
-import AddToCartButton from '../AddToCartButton/AddToCartButton';
-import CartFeedback from '../CartFeedback/CartFeedback';
+import AddToCartButton from '../../features/Cart/AddToCartButton/AddToCartButton';
+import CartFeedback from '../../features/Cart/CartFeedback';
 import Card from '../Card/Card';
 import styles from './ProductCard.module.scss';
 import useCartFeedback from '../../hooks/useCartFeedback';
