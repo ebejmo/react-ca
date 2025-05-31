@@ -5,11 +5,13 @@ import styles from './HeaderActions.module.scss';
 function HeaderActions() {
   return (
     <div className={styles.actionsRow}>
-      <Logo />
+      <div className={styles.actionsContent}>
+        <Logo />
 
-      <div className={styles.iconGroup}>
-        <ThemeToggleIcon />
-        <CartIcon cartCount={0} />
+        <div className={styles.iconGroup}>
+          <ThemeToggleIcon />
+          <CartIcon cartCount={0} />
+        </div>
       </div>
     </div>
   );
