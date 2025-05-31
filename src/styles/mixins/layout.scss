@@ -1,9 +1,5 @@
 @mixin rowWrapper {
-  max-width: var(--max-width-content);
-  padding: 0 var(--padding-content);
-  margin: 0 auto;
   height: 62px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }

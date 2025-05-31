@@ -4,6 +4,9 @@
 .menuRow {
   @include rowWrapper;
   flex-direction: row-reverse;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 var(--padding-content);
 }
 
 .links {

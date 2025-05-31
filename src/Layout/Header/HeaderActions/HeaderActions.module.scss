@@ -4,6 +4,15 @@
 .actionsRow {
   @include rowWrapper;
   border-bottom: 1px solid var(--color-border);
+
+  .actionsContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 var(--padding-content);
+    width: 100%;
+    max-width: $container-max-width;
+  }
 }
 
 header .icon {
